@@ -6,23 +6,9 @@
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     <title>Elite Hosting</title>
 </head>
-<body></body>
+<script src="https://eroinnovations.github.io/Elite/Store/Assets.js"></script>
+<script src="https://eroinnovations.github.io/Elite/Store/Components.js"></script>
+<script src="https://eroinnovations.github.io/Elite/Store/Tools.js"></script>
 <script src="https://eroinnovations.github.io/Elite/Tools/Hosting/Hosting.js"></script>
-<script  src="https://eroinnovations.github.io/Elite/Tools.js"></script>
-<script>
-    localStorage.setItem('Environment', 'Web');
-    const CloudShipping = () => {
-        import('https://eroinnovations.github.io/Elite/Start/SubStart.js')
-        .then(module => {
-            if (typeof module.START === 'function') {
-            module.START();
-            } else {
-                console.error('START is not defined in the module');
-            }
-        })
-        .catch(error => {
-            console.error('Error loading the module:', error);
-        });
-    };
-</script>  
+<body></body> 
 </html>
