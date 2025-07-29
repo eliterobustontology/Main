@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools</title>
+</head>
+<body></body>
+<script src="Tools/ImageConvertor/ImageConvertor.js"></script>
+<script  src="https://eroinnovations.github.io/Elite/Tools.js"></script>
+<script>
+    localStorage.setItem('Environment', 'Web');
+    const CloudShipping = () => {
+        import('https://eroinnovations.github.io/Elite/Start/SubStart.js')
+        .then(module => {
+            if (typeof module.START === 'function') {
+            module.START();
+            } else {
+                console.error('START is not defined in the module');
+            }
+        })
+        .catch(error => {
+            console.error('Error loading the module:', error);
+        });
+    };
+</script>  
+</html>
