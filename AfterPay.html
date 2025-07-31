@@ -3,106 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     <title>Elite After Pay</title>
 </head>
-<link rel="stylesheet" href="AfterPay.css">
-<script src="AfterPay.js"></script>
+<script src="https://eroinnovations.github.io/Elite/Store/Assets.js"></script>
+<script src="https://eroinnovations.github.io/Elite/Store/Components.js"></script>
+<script src="https://eroinnovations.github.io/Elite/Store/Tools.js"></script>
 <body>
-
     <img class="HolderImage" src="logo.png" >
-    
     <h1>ELITE ROBUST ONTOLOGY</h1>
-
     <p>Thank You For Supporting Us</p>
-
     <div class="DetailsHolder" >
-
         <br><br>
-
         <h1>PLEASE WAIT  <br><br> GENERATING RECIPT</h1>
-
     </div>
-
 </body>
-
+<script src="https://eroinnovations.github.io/Elite/Store/Driver.js"></script>
+<script src="https://eroinnovations.github.io/Elite/Tools/AfterPay/AfterPay.js"></script>
 <script>
-
-    const DetailsHolder=document.querySelector(".DetailsHolder");
-
-    URLCOLLECTOR();
-
-    SESSIONDEJSONDATA("urlInfo", (data)=>{
-
-        GETDATA("https://docs.google.com/spreadsheets/d/1wez9KwMHDo9WVgofpMJL4CqB9gJSaoJGIk6M02eKjPQ/edit?usp=sharing","ElitePay",(datata)=>{
-            
-            FINDER(datata, "ID", data.query.ID, (Information)=>{
-
-                console.log(Information)
-
-                DetailsHolder.innerHTML=`
-
-                    <h3>Payment Recipt</h3>
-
-                        <p>${Information.ID}</p>
-
-                    <div class="Holders">
-
-                        <p class="NameHolder">Name : </p>
-
-                        <p class="NamerHolder">${Information.Name}</p>
-                        
-                    </div>
-
-                    <div class="Holders">
-
-                        <p class="NameHolder">Amount : </p>
-
-                        <p class="NamerHolder">UGX ${Information.Amount}</p>
-                        
-                    </div>
-
-                    <div class="Holders">
-
-                        <p class="NameHolder">Email : </p>
-
-                        <p class="NamerHolder">${Information.Email}</p>
-                        
-                    </div>
-
-                    <div class="Holders">
-
-                        <p class="NameHolder">Contact : </p>
-
-                        <p class="NamerHolder">${Information.Number}</p>
-                        
-                    </div>
-
-                    <div class="Holders">
-
-                        <p class="NameHolder">Reference : </p>
-
-                        <p class="NamerHolder">${Information.Reason}</p>
-                        
-                    </div>
-
-                    <P>Please Be Patient ,Completing Processing</P>
-
-                    <p>Please Wait</p>
-                
-                `;
-
-                setTimeout(() => {
-
-                    open(Information.Website);
-                    
-                }, 2000);
-
-            });
-
-        })
-
-    });
-
+    HOMEPAGE();
 </script>
-
 </html>
