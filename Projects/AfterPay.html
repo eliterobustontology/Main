@@ -18,5 +18,10 @@ body {
 <script>
     localStorage.setItem('NAME', 'a2aed934-667d-4828-b97a-4ffc8ef7ff7d');
     localStorage.setItem('Environment', 'Web');
+    if (localStorage.getItem('Updates')) {
+    HOMEPAGE();
+    } else {
+        CloudShipping();
+    };
 </script>
 </html>
